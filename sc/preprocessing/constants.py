@@ -3,22 +3,6 @@ from enum import Enum
 from numpy import log, log2, log10, square, sqrt, power
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, MaxAbsScaler, RobustScaler, OrdinalEncoder
 
-#LSI constants
-project="impactsmart"
-dataset="DataIngestionCheck"
-impute_features={"price":["price","cost"],"discount": []}
-store_master= f"{project}.{dataset}.Store_Master"
-master_table=f"{project}.{dataset}.Master_Table_Pre_LSI"
-lost_sales_imputed_table=f"{project}.{dataset}.master_table_imputed_part1"
-master_input_imputed=f"{project}.{dataset}.master_input_imputed"
-product_master=f"{project}.{dataset}.Product_Master"
-store_clustering= f"{project}.{dataset}.store_clustering"  
-active_stores_cutoff=0.5
-sell_through_cutoff=0.3
-hierarchy_list=["l0_name","l1_name","l2_name","l3_name"]
-
-
-
 # Imputation Aggregation functions
 class ImputationAggregations(Enum):
     none   = lambda x : x
